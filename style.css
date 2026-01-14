@@ -13,9 +13,12 @@ body{
   background: #05070f;
   color:#fff;
   line-height:1.6;
+  transition: 0.35s ease;
 }
 
-/* Navbar */
+/* ==============================
+   ✅ NAVBAR
+================================ */
 .navbar{
   position: sticky;
   top:0;
@@ -37,12 +40,18 @@ body{
   -webkit-text-fill-color: transparent;
 }
 
+nav{
+  display: flex;
+  align-items: center;
+}
+
 nav a{
   margin-left: 18px;
   color:#fff;
   text-decoration:none;
   font-size:14px;
   opacity:0.9;
+  transition: 0.25s;
 }
 
 nav a:hover{
@@ -50,7 +59,9 @@ nav a:hover{
   text-decoration: underline;
 }
 
-/* Hero */
+/* ==============================
+   ✅ HERO
+================================ */
 .hero{
   padding: 70px 20px 40px;
   display: flex;
@@ -90,7 +101,9 @@ nav a:hover{
   margin-top: 22px;
 }
 
-/* Buttons */
+/* ==============================
+   ✅ BUTTONS
+================================ */
 .btn{
   display:inline-block;
   padding: 11px 18px;
@@ -117,7 +130,9 @@ nav a:hover{
   font-weight: bold;
 }
 
-/* Sections */
+/* ==============================
+   ✅ SECTIONS
+================================ */
 .section{
   padding: 35px 20px;
   max-width: 1050px;
@@ -138,9 +153,12 @@ nav a:hover{
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.10);
   border-radius: 22px;
+  padding: 45px 25px;
 }
 
-/* Skills cards */
+/* ==============================
+   ✅ SKILLS
+================================ */
 .skills-grid{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -172,7 +190,9 @@ nav a:hover{
   color:#f1f5f9;
 }
 
-/* Projects */
+/* ==============================
+   ✅ PROJECT FILTER BUTTONS
+================================ */
 .filter-buttons{
   margin-top: 15px;
   display:flex;
@@ -198,7 +218,9 @@ nav a:hover{
   font-weight: bold;
 }
 
-/* ✅ PROJECTS GRID (ALL SAME SIZE) */
+/* ==============================
+   ✅ PROJECT GRID (FIXED)
+================================ */
 .projects-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -206,11 +228,10 @@ nav a:hover{
   margin-top: 25px;
 }
 
-/* ✅ All cards same height */
 .project-card{
   display: flex;
   flex-direction: column;
-  height: 340px; /* ✅ fixed card height */
+  height: 340px;
   border-radius: 18px;
   overflow: hidden;
   background: rgba(255,255,255,0.05);
@@ -224,16 +245,14 @@ nav a:hover{
   box-shadow: 0 18px 50px rgba(0,0,0,0.40);
 }
 
-/* ✅ All images same size */
 .project-card img{
   width: 100%;
-  height: 190px;   /* ✅ fixed image height */
+  height: 190px;
   object-fit: cover;
   object-position: center;
   display: block;
 }
 
-/* ✅ Info section fixed */
 .project-info{
   flex: 1;
   padding: 16px;
@@ -242,7 +261,6 @@ nav a:hover{
   justify-content: space-between;
 }
 
-/* ✅ Button always bottom */
 .project-link{
   margin-top: 10px;
   display: inline-block;
@@ -264,7 +282,38 @@ nav a:hover{
   transform: translateY(-2px);
 }
 
-/* Contact */
+/* ==============================
+   ✅ SHOW MORE BUTTON
+================================ */
+.show-more-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 22px;
+}
+
+.show-more-btn{
+  padding: 10px 22px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  color: #081124;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.30);
+  transition: 0.3s;
+}
+
+.show-more-btn:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(34, 211, 238, 0.25);
+}
+
+/* ==============================
+   ✅ CONTACT
+================================ */
 .social-links{
   margin-top: 16px;
   display:flex;
@@ -279,7 +328,14 @@ nav a:hover{
   opacity:0.9;
 }
 
-/* Footer */
+.social-links a:hover{
+  opacity:1;
+  text-decoration: underline;
+}
+
+/* ==============================
+   ✅ FOOTER
+================================ */
 .footer{
   text-align:center;
   padding: 22px;
@@ -288,132 +344,205 @@ nav a:hover{
   color:#f1f5f9;
 }
 
-/* Reveal animation */
+/* ==============================
+   ✅ REVEAL ANIMATION
+================================ */
 .reveal{
   opacity: 0;
-  transform: translateY(18px);
-  transition: all 0.7s ease;
+  transform: translateY(25px);
+  transition: all 0.8s ease;
 }
 
 .reveal.active{
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0px);
 }
 
-/* ✅ Modal Background */
-.modal{
-  display: none;
+/* ==============================
+   ✅ FULLSCREEN MODAL (FINAL FIX)
+================================ */
+/* ===============================
+   FULLSCREEN MODAL (FINAL FIX)
+================================ */
+
+.fullscreen-modal{
   position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(6px);
-}
-
-/* ✅ Modal Image */
-.modal-content{
-  display: block;
-  max-width: 90%;
-  max-height: 85%;
-  margin: 60px auto;
-  border-radius: 18px;
-  box-shadow: 0 20px 80px rgba(0,0,0,0.7);
-}
-
-/* ✅ Close button */
-.close, .close-video{
-  position: absolute;
-  top: 18px;
-  right: 35px;
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-}
-
-.close:hover, .close-video:hover{
-  color: #22d3ee;
-}
-
-/* ✅ Video Modal */
-.modal-video{
-  display: block;
-  width: 90%;
-  max-width: 900px;
-  margin: 60px auto;
-  border-radius: 18px;
-  box-shadow: 0 20px 80px rgba(0,0,0,0.7);
-}
-/* ✅ Show More wrapper */
-.show-more-wrap{
-  display: flex;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(10px);
+  display: none;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-top: 18px;
+  z-index: 9999999;
 }
 
-/* ✅ Premium Show More Button (Small + Attractive) */
-.show-more-btn{
-  padding: 10px 20px;
-  border-radius: 14px;
+/* show modal */
+.fullscreen-modal.show{
+  display: flex;
+}
+
+/* image */
+#modalImg{
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.8);
+}
+
+/* video */
+#modalVideo{
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  background: black;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.8);
+}
+
+/* close button */
+.modal-close{
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 42px;
+  color: white;
   cursor: pointer;
   font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 0.2px;
+  z-index: 10000000;
+  transition: 0.2s;
+}
 
-  border: none;
-  color: #081124;
-  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+.modal-close:hover{
+  color: #22d3ee;
+  transform: scale(1.1);
+}
 
-  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.30);
-  transition: all 0.3s ease;
-  position: relative;
+/* prevent background scroll */
+body.modal-open{
   overflow: hidden;
 }
 
-/* Glow border */
-.show-more-btn::before{
-  content: "";
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(90deg, #7c3aed, #22d3ee, #7c3aed);
-  z-index: -1;
-  border-radius: 16px;
-  filter: blur(12px);
-  opacity: 0.7;
+/* ==============================
+   ✅ LIGHT THEME (Improved)
+================================ */
+
+body.light{
+  background: #f6f8ff;  /* softer background */
+  color: #0b1220;
 }
 
-/* Shine animation */
-.show-more-btn::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 120%;
-  height: 100%;
-  background: rgba(255,255,255,0.35);
-  transform: skewX(-20deg);
-  transition: 0.6s;
+/* ✅ Navbar */
+body.light .navbar{
+  background: rgba(255,255,255,0.92);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-.show-more-btn:hover{
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 14px 35px rgba(34, 211, 238, 0.25);
+/* ✅ Navbar links */
+body.light nav a{
+  color: #0b1220;
+  font-weight: 600;
+  opacity: 0.9;
 }
 
-.show-more-btn:hover::after{
-  left: 120%;
+body.light nav a:hover{
+  opacity: 1;
+  color: #2563eb;
+  text-decoration: none;
 }
 
-.show-more-btn:active{
-  transform: scale(0.97);
+/* ✅ Hero Box */
+body.light .hero-box{
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 25px 80px rgba(0,0,0,0.15);
 }
 
-/* ✅ Mobile Responsive Fix */
+/* ✅ Sections text */
+body.light .section p{
+  color: #1f2937;
+}
+
+/* ✅ Cards */
+body.light .card,
+body.light .project-card,
+body.light .section.alt{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+/* ✅ Project card hover */
+body.light .project-card:hover{
+  border-color: rgba(37,99,235,0.45);
+  box-shadow: 0 14px 45px rgba(0,0,0,0.12);
+}
+
+/* ✅ Buttons */
+body.light .btn{
+  color: #0b1220;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.85);
+}
+
+body.light .btn:hover{
+  border-color: rgba(37,99,235,0.35);
+  transform: translateY(-2px);
+}
+
+/* ✅ View button (inside cards) */
+body.light .project-link{
+  color: #0b1220;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.85);
+}
+
+body.light .project-link:hover{
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  border: none;
+  color: #081124;
+}
+
+/* ✅ Filter buttons */
+body.light .filter-btn{
+  color: #0b1220;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.80);
+}
+
+body.light .filter-btn:hover{
+  border-color: rgba(37,99,235,0.35);
+}
+
+body.light .filter-btn.active{
+  color: #081124;
+  font-weight: bold;
+  border: none;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+}
+
+/* ✅ Contact links */
+body.light .social-links a{
+  color: #0b1220;
+  opacity: 1;
+}
+
+body.light .social-links a:hover{
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* ✅ Footer */
+body.light .footer{
+  color: #0b1220;
+  border-top: 1px solid rgba(0,0,0,0.12);
+}
+
+/* ==============================
+   ✅ MOBILE FIX
+================================ */
 @media (max-width: 768px){
 
   .navbar{
@@ -448,11 +577,11 @@ nav a:hover{
   }
 
   .projects-grid{
-    grid-template-columns: 1fr; /* ✅ single column on mobile */
+    grid-template-columns: 1fr;
   }
 
   .project-card{
-    height: auto; /* ✅ let it adjust */
+    height: auto;
   }
 
   .project-card img{
@@ -463,129 +592,19 @@ nav a:hover{
     padding: 26px 16px;
   }
 }
-/* ✅ Smooth fade + slide animation */
-.reveal{
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
+/* ✅ NAVBAR spacing fix */
+nav{
+  display: flex;
+  align-items: center;
+  gap: 18px; /* ✅ equal space for all items */
 }
 
-.reveal.active{
-  opacity: 1;
-  transform: translateY(0px);
+/* ✅ Remove extra left margin from links */
+nav a{
+  margin-left: 0 !important; /* ✅ important */
 }
 
-/* ✅ Animation for project cards */
-.project-card{
-  opacity: 0;
-  transform: translateY(25px);
-  transition: all 0.6s ease;
-}
-
-.project-card.show{
-  opacity: 1;
-  transform: translateY(0);
-}
-/* ================================
-   ✅ THEME TOGGLE BUTTON
-================================ */
+/* ✅ Theme toggle spacing */
 .theme-toggle{
-  margin-left: 15px;
-  padding: 8px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.2);
-  cursor: pointer;
-  font-size: 16px;
-  background: rgba(255,255,255,0.06);
-  color: white;
-  transition: 0.3s;
-}
-
-.theme-toggle:hover{
-  transform: translateY(-2px);
-  border-color: rgba(255,255,255,0.35);
-}
-
-/* ================================
-   ✅ LIGHT THEME
-================================ */
-body.light{
-  background: #f4f7ff;
-  color: #0b1220;
-}
-
-body.light .navbar{
-  background: rgba(255,255,255,0.85);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-body.light nav a{
-  color: #0b1220;
-}
-
-body.light .section p{
-  color: #1f2937;
-}
-
-body.light .btn{
-  color: #0b1220;
-  border: 1px solid rgba(0,0,0,0.15);
-  background: rgba(0,0,0,0.03);
-}
-
-body.light .card,
-body.light .project-card,
-body.light .section.alt{
-  background: rgba(0,0,0,0.03);
-  border: 1px solid rgba(0,0,0,0.10);
-}
-
-body.light .project-link{
-  color: #0b1220;
-  border: 1px solid rgba(0,0,0,0.12);
-  background: rgba(0,0,0,0.03);
-}
-
-body.light .footer{
-  color: #0b1220;
-  border-top: 1px solid rgba(0,0,0,0.10);
-}
-
-/* ✅ Smooth transition */
-body, .navbar, .section, .card, .project-card, .btn{
-  transition: 0.35s ease;
-}
-/* ✅ Light theme fix: make filter button text visible */
-body.light .filter-btn{
-  color: #0b1220 !important;                  /* dark text */
-  border: 1px solid rgba(0,0,0,0.15) !important;
-  background: rgba(0,0,0,0.03) !important;
-}
-
-/* ✅ Active filter button keeps gradient but readable text */
-body.light .filter-btn.active{
-  color: #081124 !important;                  /* dark text inside gradient */
-  font-weight: bold;
-}
-
-/* ✅ Hover state */
-body.light .filter-btn:hover{
-  border-color: rgba(0,0,0,0.25) !important;
-}
-/* ✅ Light Theme - Contact links visible */
-body.light .social-links a{
-  color: #0b1220 !important;     /* dark text */
-  opacity: 1 !important;
-}
-
-/* ✅ Hover effect in light theme */
-body.light .social-links a:hover{
-  color: #2563eb !important;     /* blue hover */
-  text-decoration: underline;
-}
-
-/* ✅ Light Theme Footer text visible */
-body.light .footer{
-  color: #0b1220 !important;
-  border-top: 1px solid rgba(0,0,0,0.15) !important;
+  margin-left: 0 !important;
 }
