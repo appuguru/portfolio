@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guru Prasanth V | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+  <a href="#home" class="nav-link">Home</a>
+  <a href="#about" class="nav-link">About</a>
+  <a href="#skills" class="nav-link">Skills</a>
+  <a href="#projects" class="nav-link">Projects</a>
+  <a href="#contact" class="nav-link">Contact</a>
+
+  <!-- ✅ Theme Toggle Button -->
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+    🌙
+  </button>
+</nav>
+
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-box">
+      <h1>Hi, I'm <span class="highlight">Guru Prasanth V</span></h1>
+      <p>Graphic Designer | 3D Designer | Video Editor</p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section reveal">
+    <h2>About Me</h2>
+    <p>
+      I’m a creative designer skilled in <b>Graphic Design, 3D Modeling, and Video Editing</b>.
+      I create posters, banners, social media creatives, 3D assets, and promotional videos with strong focus on
+      <b>branding, typography, and visual storytelling</b>.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section alt reveal">
+    <h2>Core Skills</h2>
+
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Graphic Design</h3>
+        <p>Posters, banners, branding, social media creatives</p>
+      </div>
+      <div class="card">
+        <h3>3D Designing</h3>
+        <p>3D modeling, sculpting, lighting, rendering</p>
+      </div>
+      <div class="card">
+        <h3>Video Editing</h3>
+        <p>Reels, promo videos, highlights, motion effects</p>
+      </div>
+    </div>
+
+    <h3 class="sub-title">Tools & Software</h3>
+    <p class="tools">
+      Adobe Photoshop, Adobe Illustrator, Canva, Blender (Basics), ZBrush, AutoCAD, ArtCAM,
+      Adobe Premiere Pro, DaVinci Resolve, CapCut
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section reveal">
+    <h2>Projects</h2>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="graphic">Graphic</button>
+      <button class="filter-btn" data-filter="3d">3D</button>
+      <button class="filter-btn" data-filter="video">Video</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ===================== -->
+      <!-- ✅ GRAPHIC PROJECTS -->
+      <!-- ===================== -->
+
+      <div class="project-card" data-category="graphic">
+        <img src="assets/graphic1.jpg" alt="Poster Design">
+        <div class="project-info">
+          <div>
+            <h3>Product Poster</h3>
+            <p><b>Tools:</b> Photoshop, Illustrator, Canva</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/graphic1.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="graphic">
+        <img src="assets/graphic2.jpg" alt="Social Media Creative">
+        <div class="project-info">
+          <div>
+            <h3>Event ID Card</h3>
+            <p><b>Tools:</b> Canva, Photoshop</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/graphic2.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="graphic">
+        <img src="assets/graphic3.jpg" alt="Poster Design">
+        <div class="project-info">
+          <div>
+            <h3>Product Poster</h3>
+            <p><b>Tools:</b> Photoshop, Illustrator</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/graphic3.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="graphic">
+        <img src="assets/graphic4.jpg" alt="Social Media Creative">
+        <div class="project-info">
+          <div>
+            <h3>Business Logo</h3>
+            <p><b>Tools:</b>Illustrator</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/graphic4.jpg">View</a>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- ✅ 3D PROJECTS (8 TOTAL) -->
+      <!-- ===================== -->
+
+      <div class="project-card" data-category="3d">
+        <img src="assets/3d1.jpg" alt="3D Design">
+        <div class="project-info">
+          <div>
+            <h3>3D Model & Render 01</h3>
+            <p><b>Tools:</b> ZBrush, Blender</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/3d1.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="3d">
+        <img src="assets/3d2.jpg" alt="3D Design">
+        <div class="project-info">
+          <div>
+            <h3>3D Model & Render 02</h3>
+            <p><b>Tools:</b> ZBrush, Blender</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/3d2.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="3d">
+        <img src="assets/3d3.jpg" alt="3D Design">
+        <div class="project-info">
+          <div>
+            <h3>3D Model & Render 03</h3>
+            <p><b>Tools:</b> ZBrush, Blender</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/3d3.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="3d">
+        <img src="assets/3d4.jpg" alt="3D Design">
+        <div class="project-info">
+          <div>
+            <h3>3D Model & Render 04</h3>
+            <p><b>Tools:</b> ZBrush, Blender</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/3d4.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="3d">
+        <img src="assets/3d5.jpg" alt="3D Design">
+        <div class="project-info">
+          <div>
+            <h3>AutoCAD & ArtCAM model 01</h3>
+            <p><b>Tools:</b> AutoCAD, ArtCAM</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/3d5.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="3d">
+        <img src="assets/3d6.jpg" alt="3D Design">
+        <div class="project-info">
+          <div>
+            <h3>AutoCAD & ArtCAM model 02</h3>
+            <p><b>Tools:</b> AutoCAD, ArtCAM</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/3d6.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="3d">
+        <img src="assets/3d7.jpg" alt="3D Design">
+        <div class="project-info">
+          <div>
+            <h3>AutoCAD & ArtCAM model 03</h3>
+            <p><b>Tools:</b> AutoCAD, ArtCAM</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/3d7.jpg">View</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="3d">
+        <img src="assets/3d8.jpg" alt="3D Design">
+        <div class="project-info">
+          <div>
+            <h3>AutoCAD & ArtCAM model 04</h3>
+            <p><b>Tools:</b> AutoCAD, ArtCAM</p>
+          </div>
+          <a class="project-link view-btn" href="#" data-img="assets/3d8.jpg">View</a>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- ✅ VIDEO PROJECTS (4 TOTAL) -->
+      <!-- ===================== -->
+
+      <div class="project-card" data-category="video">
+        <img src="assets/video1.jpg" alt="Video Editing">
+        <div class="project-info">
+          <div>
+            <h3>Poster reveal Reel</h3>
+            <p><b>Tools:</b> Premiere Pro, CapCut</p>
+          </div>
+          <a class="project-link video-btn" href="#" data-video="assets/video1.mp4">Watch</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="video">
+        <img src="assets/video2.jpg" alt="Video Editing">
+        <div class="project-info">
+          <div>
+            <h3> Promotional Reel</h3>
+            <p><b>Tools:</b> After Effects</p>
+          </div>
+          <a class="project-link video-btn" href="#" data-video="assets/video2.mp4">Watch</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="video">
+        <img src="assets/video3.jpg" alt="Video Editing">
+        <div class="project-info">
+          <div>
+            <h3>promo reel</h3>
+            <p><b>Tools:</b> DaVinci Resolve </p>
+          </div>
+          <a class="project-link video-btn" href="#" data-video="assets/video3.mp4">Watch</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="video">
+        <img src="assets/video4.jpg" alt="Video Editing">
+        <div class="project-info">
+          <div>
+            <h3>team reveal edit</h3>
+            <p><b>Tools:</b> Premiere Pro, CapCut</p>
+          </div>
+          <a class="project-link video-btn" href="#" data-video="assets/video4.mp4">Watch</a>
+        </div>
+      </div>
+
+    </div> <!-- ✅ CLOSE projects-grid -->
+
+    <!-- ✅ Show More Button (OUTSIDE grid) -->
+    <div class="show-more-wrap">
+      <button id="showMoreBtn" class="show-more-btn">Show More</button>
+    </div>
+
+  </section> <!-- ✅ CLOSE projects section -->
+
+  <!-- Contact -->
+  <section id="contact" class="section alt reveal">
+    <h2>Contact</h2>
+    <p><b>Email:</b> vguru9339@gmail.com</p>
+    <p><b>Phone:</b> +91 93600 62939</p>
+
+  <div class="social-links">
+  <a href="https://www.linkedin.com/in/guru-prasanth-v-90836328a" target="_blank">LinkedIn</a>
+  <a href="https://github.com/appuguru" target="_blank">github</a>
+  <a href="https://www.instagram.com/blxck_luv_?igsh=ZmRhdWs2aHFyMnR6" target="_blank">Instagram</a>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Guru Prasanth V | Portfolio</p>
+  </footer>
+
+  <!-- ✅ Image Popup Modal -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <!-- ✅ Video Popup Modal -->
+  <div id="videoModal" class="modal">
+    <span class="close-video">&times;</span>
+    <video class="modal-video" id="modalVideo" controls></video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
