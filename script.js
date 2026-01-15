@@ -190,3 +190,25 @@ if (themeToggle) {
     }
   });
 }
+// ==============================
+// ✅ Mobile Menu Toggle
+// ==============================
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+
+    // Change icon
+    menuToggle.textContent = navMenu.classList.contains("active") ? "✖" : "☰";
+  });
+
+  // Close menu when clicking nav links
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      menuToggle.textContent = "☰";
+    });
+  });
+}

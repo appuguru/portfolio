@@ -9,21 +9,29 @@
 
 <body>
 
-  <!-- ✅ Navbar -->
-  <header class="navbar">
-    <div class="logo">Guru Prasanth</div>
+ <!-- Navbar -->
+<header class="navbar">
+  <div class="logo">Guru Prasanth</div>
 
-    <nav>
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#contact" class="nav-link">Contact</a>
+  <!-- ✅ Hamburger button (mobile) -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+    ☰
+  </button>
 
-      <!-- ✅ Theme Toggle Button -->
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
-    </nav>
-  </header>
+  <nav class="nav-menu" id="navMenu">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+
+    <!-- ✅ Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      🌙
+    </button>
+  </nav>
+</header>
+
 
   <!-- ✅ Hero -->
   <section id="home" class="hero">

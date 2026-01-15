@@ -608,3 +608,90 @@ nav a{
 .theme-toggle{
   margin-left: 0 !important;
 }
+/* ===========================
+   ✅ MOBILE MENU
+=========================== */
+
+/* Hide hamburger in desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Desktop nav */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 12px;
+  }
+
+  /* Menu hidden by default */
+  .nav-menu {
+    position: absolute;
+    top: 58px;
+    right: 15px;
+
+    width: 200px;
+    padding: 15px;
+
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(10, 15, 30, 0.92);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+
+  /* Show menu when active */
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    margin: 0;
+    width: 100%;
+  }
+
+  .theme-toggle {
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ✅ Light Theme menu */
+body.light .menu-toggle {
+  background: rgba(0,0,0,0.05);
+  color: #0b1220;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+body.light .nav-menu {
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+body.light .nav-menu a {
+  color: #0b1220;
+}
