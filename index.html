@@ -13,24 +13,37 @@
 <header class="navbar">
   <div class="logo">Guru Prasanth</div>
 
-  <!-- ✅ Hamburger button (mobile) -->
-  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-    ☰
-  </button>
-
-  <nav class="nav-menu" id="navMenu">
+  <!-- Desktop Menu -->
+  <nav class="desktop-menu">
     <a href="#home" class="nav-link">Home</a>
     <a href="#about" class="nav-link">About</a>
     <a href="#skills" class="nav-link">Skills</a>
     <a href="#projects" class="nav-link">Projects</a>
     <a href="#contact" class="nav-link">Contact</a>
 
-    <!-- ✅ Theme Toggle Button -->
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-      🌙
-    </button>
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
   </nav>
+
+  <!-- Mobile Menu Button -->
+  <button id="menuBtn" class="menu-btn">☰</button>
 </header>
+
+<!-- ✅ FULL SCREEN Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu">
+  <button id="closeMenu" class="close-menu">✕</button>
+
+  <div class="mobile-menu-links">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+
+    <!-- Theme Toggle in Mobile -->
+    <button id="themeToggleMobile" class="theme-toggle-mobile">🌙</button>
+  </div>
+</div>
 
 
   <!-- ✅ Hero -->

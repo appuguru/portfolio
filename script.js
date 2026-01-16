@@ -212,3 +212,42 @@ if (menuToggle && navMenu) {
     });
   });
 }
+// ✅ Mobile Menu Open/Close
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("show");
+  document.body.style.overflow = "hidden"; // lock scroll
+});
+
+closeMenu.addEventListener("click", () => {
+  mobileMenu.classList.remove("show");
+  document.body.style.overflow = "auto";
+});
+
+// Close menu when clicking link
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("show");
+    document.body.style.overflow = "auto";
+  });
+});
+
+
+// ✅ Theme Toggle for Mobile button also
+const themeToggleMobile = document.getElementById("themeToggleMobile");
+
+function updateThemeIcons() {
+  const isLight = document.body.classList.contains("light");
+  document.getElementById("themeToggle").textContent = isLight ? "☀️" : "🌙";
+  themeToggleMobile.textContent = isLight ? "☀️" : "🌙";
+}
+
+themeToggleMobile.addEventListener("click", () => {
+  document.getElementById("themeToggle").click(); // trigger same theme toggle
+  updateThemeIcons();
+});
+
+updateThemeIcons();

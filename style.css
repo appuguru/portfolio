@@ -695,3 +695,117 @@ body.light .nav-menu {
 body.light .nav-menu a {
   color: #0b1220;
 }
+/* ===============================
+   ✅ MOBILE FULL SCREEN MENU ONLY
+================================ */
+
+/* Hide menu button in desktop */
+.menu-btn {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile full-screen menu */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 7, 15, 0.97);
+  backdrop-filter: blur(18px);
+  z-index: 999999;
+
+  display: none;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.mobile-menu.show {
+  display: flex;
+}
+
+/* Close button */
+.close-menu {
+  font-size: 34px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Mobile links */
+.mobile-menu-links {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-size: 20px;
+}
+
+.mobile-menu-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Mobile theme toggle */
+.theme-toggle-mobile {
+  margin-top: 30px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ✅ Mobile Only */
+@media(max-width: 768px){
+
+  /* Desktop menu hidden */
+  .desktop-menu{
+    display: none;
+  }
+
+  /* Menu icon shown */
+  .menu-btn{
+    display: block;
+  }
+}
+
+/* ✅ Light theme mobile menu */
+body.light .mobile-menu{
+  background: rgba(244,247,255,0.96);
+}
+
+body.light .mobile-menu-links a{
+  color: #0b1220;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+body.light .close-menu{
+  color: #0b1220;
+}
+
+body.light .theme-toggle-mobile{
+  color: #0b1220;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.03);
+}
+/* ✅ Light theme: mobile menu icon should be black */
+body.light .menu-btn{
+  color: #000 !important;
+}
+
+/* ✅ Light theme: close (X) should be black */
+body.light .close-menu{
+  color: #000 !important;
+}
